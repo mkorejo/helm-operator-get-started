@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: stefanprodan/podinfo
-      tag: 5.0.2
+      tag: dev-hdtwcel9
     replicaCount: 1
     hpa:
       enabled: false
