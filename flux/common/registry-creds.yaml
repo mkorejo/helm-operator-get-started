@@ -10,7 +10,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: registry-creds-leader-election-role
-  namespace: registry-creds-system
+  namespace: adm
 rules:
 - apiGroups:
   - ""
@@ -128,7 +128,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: registry-creds-leader-election-rolebinding
-  namespace: registry-creds-system
+  namespace: adm
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -136,7 +136,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: registry-creds-system
+  namespace: adm
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -149,7 +149,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: registry-creds-system
+  namespace: adm
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -157,7 +157,7 @@ metadata:
   labels:
     control-plane: registry-creds-controller
   name: registry-creds-registry-creds-controller
-  namespace: registry-creds-system
+  namespace: adm
 spec:
   replicas: 1
   selector:
