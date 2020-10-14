@@ -5,6 +5,8 @@ metadata:
   name: podinfo-dev
   namespace: dev
   annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:dev-*
 spec:
   releaseName: podinfo-dev
   chart:
@@ -13,7 +15,7 @@ spec:
     ref: master
   values:
     image:
-      repository: stefanprodan/podinfo
+      repository: mkorejo/podinfo
       tag: 5.0.2
     replicaCount: 1
     hpa:
