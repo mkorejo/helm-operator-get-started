@@ -1,0 +1,93 @@
+---
+# https://github.com/grafeas/grafeas/tree/master/grafeas-charts
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: grafeas
+  namespace: adm
+spec:
+  releaseName: grafeas
+  chart:
+    git: git@github.com:grafeas/grafeas
+    path: grafeas-charts
+    ref: master
+  values:
+    container:
+      port: 5000
+    certificates:
+      enabled: true
+      name: self-signed
+      ca: |
+        -----BEGIN CERTIFICATE-----
+        MIIDPjCCAiYCCQC24CsNivxVQTANBgkqhkiG9w0BAQsFADBhMQswCQYDVQQGEwJV
+        UzESMBAGA1UECAwJTG91aXNpYW5hMRQwEgYDVQQHDAtOZXcgT3JsZWFuczEVMBMG
+        A1UECgwMTXVyYWQgS29yZWpvMREwDwYDVQQLDAhQcmVzaWRpbzAeFw0yMDEwMTcx
+        NTM2MTFaFw0yMTEwMTcxNTM2MTFaMGExCzAJBgNVBAYTAlVTMRIwEAYDVQQIDAlM
+        b3Vpc2lhbmExFDASBgNVBAcMC05ldyBPcmxlYW5zMRUwEwYDVQQKDAxNdXJhZCBL
+        b3Jlam8xETAPBgNVBAsMCFByZXNpZGlvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+        MIIBCgKCAQEA6vqu+j0ap+i+AgUkMlLUg2paWPx3QzwNuCykWhXWeCS2xztnFdQ8
+        4Gkji/m5WGcFjCP8GxJ6AJuKoqjDXqHlTW0p0wXwD9UASJFUptJK0zxjoWyWwKY8
+        2Cf4fSqDV+VhjGNmInCXsbg9s89GN+IcaqfyGzwXS9NxA24esb5hA9l+REhs34bP
+        MRbLtqpN8IEceuq7gkVK8odC2inR0QUELlrPkMgo6DEiSd8hGp/6iR1MozR5DyDl
+        vukhLQuGGvM0WQDladst6Bf+Ep/jW0MSS+zbLHgXpC8oRvTrHgQ/S0JevkS6lg/4
+        7nyOnwo6H9JrQbUSJPdbQ0RXu8YYvSqTxQIDAQABMA0GCSqGSIb3DQEBCwUAA4IB
+        AQCfrW5b9wli1SK/ZiwFZM6PnVN/m5gOX40otZk6IMe6ROyFUelGvE7nE+CpCsOC
+        7d1IyVzUzd4aVFkrJ1VyVkWJQiGbLp2r23oAC04Y6YWihl8aeJgDoZFyxd95k/cL
+        QYJeUxGxOHrrWncP2WvV/Xh81uza0nnWaxCKFWQji+1x8abXh6K+4gIFIzpWPpjS
+        SI5S2SBhf5LdQOP6d94ZHpliJ6r0hxLeY4AJvMaEQ6YnfBHkN+GAxSLkyxOOXsx+
+        U11uWswA6+6pWoYJEHsEDwSk2ElLZk49cVOIpia37lFxa8ytxz7oz7iekUudB/ym
+        EoVEJbTpf9qNK9lmTHCHvrrd
+        -----END CERTIFICATE-----
+      cert: |
+        -----BEGIN CERTIFICATE-----
+        MIIDLzCCAhcCAQEwDQYJKoZIhvcNAQEFBQAwYTELMAkGA1UEBhMCVVMxEjAQBgNV
+        BAgMCUxvdWlzaWFuYTEUMBIGA1UEBwwLTmV3IE9ybGVhbnMxFTATBgNVBAoMDE11
+        cmFkIEtvcmVqbzERMA8GA1UECwwIUHJlc2lkaW8wHhcNMjAxMDE3MTUzNjU1WhcN
+        MjExMDE3MTUzNjU1WjBaMQswCQYDVQQGEwJVUzESMBAGA1UECAwJTG91aXNpYW5h
+        MRQwEgYDVQQHDAtOZXcgT3JsZWFuczEVMBMGA1UECgwMTXVyYWQgS29yZWpvMQow
+        CAYDVQQDDAEqMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAomVihlaG
+        oun/frzDJFdoJ/sT70biDcYPWB7GphX8GhguEzql/4lmh9evGePYPwg3kPGnGVUf
+        WrHNtjwVDX69CM745H/VTJhwurhMNhe672yBziCs1rdjwmB/6JUekKf5qSTL2zs0
+        Eu0oUVgHPc5MDFjMx0T3QbSZ1Sw9If7ioO+HqDv4YTMIPltyBC9CpnhXrqTuXbeq
+        +O5UYhgthTOPzk6xBcPc2ZAcqW9n1VEwF3POZTol1gqQh+UxssaCJCI02djg/lRi
+        atE7xyWf35fpRYriX/rlNchiSL5X4ITs/9OxS8dD17t5SB8t3dnncvfVC7y5XAtN
+        HyVcB3f6iBOV/wIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQArEJo36nrfPVQL+Yzz
+        lgXbtnMESgVvLai2HZPMHGvOQh4arSty/XJ/UN+s5wI+I2hQVGuRSpNwFu+hCA3h
+        1F96go1t7sYIAkvZ+Gp+7u1Wa+SmztYhhxBdR8wTHHK2pRiIn1BwdolIk81yVPPG
+        bt87Qs8Kn8ScZE6BgscP45SPlEycIQylab+mS7+adl6ZfRaUNOCRTFJXjm57xz89
+        OJEUWdaZvnsRMID2EedjXHZOIP2VyShGgtCihYfVYUS84Zaqit1HJOOf85qtX6gu
+        +d0pyjxySLXcL6UvsVXcqkimfY2+fe1+JSp3ujjOS4DImpBVoy5kOO9PHiaGL07v
+        AnI4
+        -----END CERTIFICATE-----
+      key: |
+        -----BEGIN RSA PRIVATE KEY-----
+        MIIEpAIBAAKCAQEAomVihlaGoun/frzDJFdoJ/sT70biDcYPWB7GphX8GhguEzql
+        /4lmh9evGePYPwg3kPGnGVUfWrHNtjwVDX69CM745H/VTJhwurhMNhe672yBziCs
+        1rdjwmB/6JUekKf5qSTL2zs0Eu0oUVgHPc5MDFjMx0T3QbSZ1Sw9If7ioO+HqDv4
+        YTMIPltyBC9CpnhXrqTuXbeq+O5UYhgthTOPzk6xBcPc2ZAcqW9n1VEwF3POZTol
+        1gqQh+UxssaCJCI02djg/lRiatE7xyWf35fpRYriX/rlNchiSL5X4ITs/9OxS8dD
+        17t5SB8t3dnncvfVC7y5XAtNHyVcB3f6iBOV/wIDAQABAoIBAGcKK0SPvCe8j2dr
+        /+mcKDNOBS0Kbb5NkEjaZjLVujsYYovC57bHCK5itPCZeAkufotSOTNCpn1WWe8q
+        GjWQ2AKxyIy7a6yJAOYIsBqWXf8yev4+D0zB2eNodWAu1dD1M90Vwt9cpkLoBW/v
+        idC2h9xBr9U0NiqTnBP9WOCsKEHyFwMLanjhEJcHZQgsKHBcavYebM1TMBB4yZsj
+        LUN015HvOEoojNLwxKlXLrE3nAwWXCSFMbUMSJcZeE1AgZzmt5tyL0Dozg747LuH
+        wSPYp65pg9gILuY992ThQGHKoq+oOVIKElz+jbpBBDhpK+Cwa3a8I4M1dDvEWA/c
+        CROF4QECgYEAzF9bI0fSpImrbhm1UF3q+9ewdJXikhLsCBk+NYCio+RaouD0LKR9
+        lk8P+wyELTbrOs9Gx/wqXF9Z/MaGwbCKAenZIbqraB3oUr3tyNi+YB8syWEjITK7
+        1lCA6O7dTJ88Lq0jJbgFnrq4CpmTN8GFT7d/q0gpU98cR1DVutT4Hn8CgYEAy2tv
+        +63iFSmQ8Zp5J5aRBRGPqNweILaGn1Jxw4ZZA/Syjmvspd+5Gyn3W4tKbuRvIxKj
+        uGjgNk35Xb9VWV+BGOBpkhgwjBQLKPLUodgq1VpYMsGpJm5ZXKcgPQDXqWBI2byb
+        m2rxDhUQ6Kliw4FTz9tl0JLPAmKDgeOa/BZHyIECgYEAhWZwvNSy4AekyJcrTKwh
+        KAYf/dmgLK0BOEAR5SZ0AvqZVtvzRfiQqT4uNjZzSHgijx6hGwS0Odtbh62mZGNx
+        kdIskuGf5LQw42FqBsHDckanG0O2hILzLO8bVfAkr1D5HZaR7JrzwCos225nM+uz
+        stcaFJljsIVflgVjnTJKSs0CgYEAmsjpsQyi14+FZxIv1lvPhZfTRJ4ZnrLExT6q
+        qij0Wvo7U/vzWlReObk5K0NWJANWPc3VHmFPGoNCmH8apqLxTMiWDECz0CMASuxb
+        t7sQ/L9+FUEfQMr+3G2fLkwRziQhyuylSyGYwypsb11UdYdXCvbbBlZvhlUH1DIo
+        oGEjxgECgYAsZjaZSFRpfiJ/IshspjuCKBb9ToflpW3CrqKqm8gt8Z/4zIDgDSvb
+        AqqroUvKr//+qIfxazb+IiENLRsYj2nMDMnMwzFcATyDQYwuvUPB4Gv1TXSSUve8
+        FJAznQdUmNeM2Jg3Hk8CMKP9gxOFt7xaIZycw0Yt5CQChMnGp1gYjA==
+        -----END RSA PRIVATE KEY-----
+    secret:
+      enabled: true
+    service:
+      port: 5000
