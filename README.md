@@ -27,8 +27,8 @@ Looking at steps #1 and #2 above, some prerequisites emerge:
 Huge strides have been made to standardize all the interfaces at play here, so meeting the prerequisites is not too difficult. The technology is there, Kubernetes is everywhere, and you only need to get started.
 
 Now, how do you manage multiple production and non-production clusters across the world? Let's revisit #1 and #2 above:
-1. **Run multiple Kubernetes clusters**
-   - Automate cluster provisioning.
+1. **Run a lot of Kubernetes**
+   - Automate cluster provisioning and bootstrapping.
    - Establish control and observability across all clusters such that you can _monitor_ node health, Kubernetes versions, current workloads, and scaling activity in one place, as well as _manage_ the provisioning and teardown of clusters consistently.
 2. **Manage state across multiple clusters**
    - Ensure that standard cluster add-ons and services are deployed to all clusters and that configurations are kept in sync.
