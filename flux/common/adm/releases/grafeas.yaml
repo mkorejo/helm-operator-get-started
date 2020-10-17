@@ -16,7 +16,7 @@ spec:
       port: 5000
     certificates:
       enabled: true
-      name: self-signed
+      name: grafeas-self-signed
       ca: |
         -----BEGIN CERTIFICATE-----
         MIIDPjCCAiYCCQC24CsNivxVQTANBgkqhkiG9w0BAQsFADBhMQswCQYDVQQGEwJV
