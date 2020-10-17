@@ -111,6 +111,10 @@ spec:
             mountPath: /data
           resources:
 {{ toYaml .Values.resources | indent 12 }}
+      {{- if .Values.image.pullSecret }}
+      imagePullSecret:
+      - name: {{ .Values.image.pullSecret }}
+      {{- end }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
