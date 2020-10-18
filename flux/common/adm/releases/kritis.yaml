@@ -5,6 +5,7 @@ metadata:
   name: kritis
   namespace: adm
 spec:
+  helmVersion: v2
   releaseName: kritis
   chart:
     git: git@github.com:grafeas/kritis
