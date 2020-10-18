@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: mkorejo/podinfo
-      tag: dev-tufsegrm
+      tag: dev-239timsn
       pullSecret: dockerhub-registrycreds
     replicaCount: 1
     hpa:
