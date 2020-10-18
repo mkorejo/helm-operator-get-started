@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: mkorejo/podinfo
-      tag: dev-fnmgwbhr
+      tag: dev-ftl0dxdk
       pullSecret: dockerhub-registrycreds
     replicaCount: 1
     hpa:
