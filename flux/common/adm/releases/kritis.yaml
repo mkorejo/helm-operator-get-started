@@ -10,3 +10,5 @@ spec:
     git: git@github.com:grafeas/kritis
     path: kritis-charts
     ref: v0.2.2
+values:
+  serviceNamespace: adm
