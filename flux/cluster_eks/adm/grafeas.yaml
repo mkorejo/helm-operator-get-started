@@ -22,7 +22,7 @@ spec:
     secret:
       enabled: false
     service:
-      port: 5000
+      port: 80
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -39,7 +39,7 @@ spec:
       paths:
       - backend:
           serviceName: grafeas-server
-          servicePort: 5000
+          servicePort: 80
         path: /
   tls:
   - hosts:
