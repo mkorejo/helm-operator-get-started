@@ -1,0 +1,13 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: kritis
+  namespace: adm
+spec:
+  releaseName: kritis
+  chart:
+    git: git@github.com:grafeas/kritis
+    path: kritis-charts
+    ref: v0.2.2
+  values:

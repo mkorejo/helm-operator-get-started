@@ -1,5 +1,4 @@
 ---
-# https://github.com/grafeas/grafeas/tree/master/grafeas-charts
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
@@ -10,7 +9,7 @@ spec:
   chart:
     git: git@github.com:grafeas/grafeas
     path: grafeas-charts
-    ref: master
+    ref: v0.1.6
   values:
     container:
       port: 5000
