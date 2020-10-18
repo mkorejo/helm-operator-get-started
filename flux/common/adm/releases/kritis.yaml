@@ -5,11 +5,12 @@ metadata:
   name: kritis
   namespace: adm
 spec:
-  helmVersion: v2
   releaseName: kritis
   chart:
     git: git@github.com:grafeas/kritis
     path: kritis-charts
     ref: v0.2.2
+  rollback:
+    disableHooks: true
 values:
   serviceNamespace: adm
