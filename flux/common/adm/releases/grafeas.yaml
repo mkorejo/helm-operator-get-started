@@ -15,7 +15,7 @@ spec:
     container:
       port: 5000
     certificates:
-      enabled: true
+      enabled: false
       name: grafeas-self-signed
       ca: |
         -----BEGIN CERTIFICATE-----
@@ -88,6 +88,6 @@ spec:
         FJAznQdUmNeM2Jg3Hk8CMKP9gxOFt7xaIZycw0Yt5CQChMnGp1gYjA==
         -----END RSA PRIVATE KEY-----
     secret:
-      enabled: true
+      enabled: false
     service:
       port: 5000
