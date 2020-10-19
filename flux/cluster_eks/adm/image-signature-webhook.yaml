@@ -33,6 +33,7 @@ spec:
           image: mkorejo/image-signature-webhook:0.1.0
           imagePullPolicy: Always
           args:
+            - "-grafeas http://grafeas-server:80"
             - "-tls-cert=/etc/admission-controller/tls/tls.crt"
             - "-tls-key=/etc/admission-controller/tls/tls.key"
           volumeMounts:
