@@ -19,7 +19,6 @@ Kubernetes is purposefully-built to streamline IT operations. Imperative to Kube
 3. **Profit**
    - Kubernetes will fulfill your request upon acceptance or otherwise describe why the request cannot be fulfilled.
 
-## Requirements
 Looking at #1 and #2, some prerequisites emerge:
 * Capture all configurations as source code.
 * We must be able to *plug* existing infrastructure into Kubernetes, e.g. VMs or physical servers for the Kubernetes workers, external storage devices for persistent volumes, and load balancers for ingress.
