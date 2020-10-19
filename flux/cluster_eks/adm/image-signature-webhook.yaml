@@ -21,7 +21,8 @@ metadata:
   namespace: adm
 spec:
   selector:
-    app: image-signature-webhook
+    matchLabels:
+      app: image-signature-webhook
   template:
     metadata:
       labels:
