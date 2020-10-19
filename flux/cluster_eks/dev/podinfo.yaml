@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: mkorejo/podinfo
-      tag: dev-b0mo7y8q
+      tag: dev-5jtkyjup
       pullSecret: dockerhub-registrycreds
     replicaCount: 1
     hpa:
