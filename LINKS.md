@@ -5,6 +5,8 @@
 
 ## Grafeas
 - [Concepts](https://github.com/grafeas/grafeas/blob/master/docs/grafeas_concepts.md)
+- [Grafeas Users](https://groups.google.com/g/grafeas-users)
+  - [This post saved me!](https://groups.google.com/g/grafeas-users/c/p0IBQNzNBQE)
 - [Kelsey's Grafeas tutorial](https://github.com/kelseyhightower/grafeas-tutorial)
 
 ## Miscellaneous

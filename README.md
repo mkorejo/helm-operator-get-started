@@ -37,4 +37,4 @@ How do you manage multiple production and non-production clusters across the glo
    - Ensure that standard cluster add-ons and services are deployed to all clusters and that configurations are kept in sync.
    - Enable self-serviceability for application teams to deploy their own workloads without causing an issue.
 
-Enabling self-serviceability with minimal risk requires automation, secrets management, and use of Kubernetes namespaces, RBAC, quotas, and [admission controllers](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/).
+Enabling self-serviceability with minimal risk requires automation, secrets management, backup/restore strategy, and use of Kubernetes namespaces, RBAC, quotas, and [admission controllers](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/).
