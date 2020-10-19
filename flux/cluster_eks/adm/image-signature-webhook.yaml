@@ -40,6 +40,8 @@ spec:
               mountPath: /etc/admission-controller/tls
             - name: pubkeys
               mountPath: /etc/admission-controller/pubkeys
+      imagePullSecrets:
+      - name: dockerhub-registrycreds
       volumes:
         - name: tls
           secret:
