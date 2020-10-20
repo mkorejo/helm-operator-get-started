@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: mkorejo/podinfo
-      tag: stg-9ij63o4c
+      tag: stg-ov5manez
     replicaCount: 2
     hpa:
       enabled: true
