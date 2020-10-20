@@ -7,7 +7,7 @@ webhooks:
   - name: image-signature.mkorejo.com
     namespaceSelector:
       matchLabels:
-        namespace: stg
+        validate-image-signatures: "yes"
     rules:
       - apiGroups:
           - ""

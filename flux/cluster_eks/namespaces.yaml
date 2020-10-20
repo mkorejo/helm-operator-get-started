@@ -8,6 +8,8 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: stg
+  labels:
+    validate-image-signatures: "yes"
 ---
 apiVersion: v1
 kind: Namespace

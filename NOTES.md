@@ -6,7 +6,7 @@ The public SSH identity for a Flux installation is generated on startup. Check t
 ```
 cd hack && ./ci-mock.sh -r mkorejo/podinfo -b dev
            ./ci-mock.sh -r mkorejo/podinfo -b stg
-           ./ci-mock.sh -r mkorejo/podinfo -t 5.0.2
+           ./ci-mock.sh -r mkorejo/podinfo -v 5.0.2
 ```
 
 ## Create seed secret for `registry-creds`
