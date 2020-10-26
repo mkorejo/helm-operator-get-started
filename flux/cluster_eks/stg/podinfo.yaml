@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: mkorejo/podinfo
-      tag: stg-bmxqcspy
+      tag: stg-aw2ksdue
     replicaCount: 2
     hpa:
       enabled: true
